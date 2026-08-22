@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Jaisalmer travel</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- Bootstrap 5 JS Bundle (Includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    /* Home-page intro only. This markup and its script live in index.html so
+       internal pages never receive the intro screen. */
+    body.aod-intro-active {
+      overflow: hidden;
+    }
+
+    .aod-home-intro {
+      position: fixed;
+      z-index: 2147483647;
+      inset: 0;
+      display: grid;
+      width: 100%;
+      height: 100dvh;
+      overflow: hidden;
+      background: #000;
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 550ms ease, visibility 0s linear 550ms;
+    }
+
+    .aod-home-intro.is-leaving {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .aod-home-intro__video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* Home-page video hero only */
+    .aod-video-hero {
+      position: relative;
+      height: 75vh;
+      min-height: 480px;
+      overflow: hidden;
+      isolation: isolate;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #1a120d url("images/Home/bg-1.jpg") center / cover no-repeat;
+    }
+
+    .aod-hero-video,
+    .aod-video-overlay {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .aod-hero-video {
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .aod-video-overlay {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6));
+      z-index: 1;
+    }
+
+    .aod-video-hero .aod-caption {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Home-page accommodation rows only */
+    .aod-accommodation-card {
+      display: flex;
+      align-items: stretch;
+      overflow: hidden;
+      padding: 0;
+      border: 1px solid #ebebeb;
+      border-radius: 6px;
+      background: #ffffff;
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.12);
+    }
+
+    .aod-accommodation-card--reverse {
+      flex-direction: row-reverse;
+    }
+
+    .aod-accommodation-image,
+    .aod-accommodation-content {
+      width: 50%;
+    }
+
+    .aod-accommodation-image {
+      min-height: 310px;
+      overflow: hidden;
+      background: #f8f5f0;
+    }
+
+    .aod-accommodation-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .aod-accommodation-card:hover .aod-accommodation-image img {
+      transform: scale(1.05);
+    }
+
+    .aod-accommodation-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 38px;
+    }
+
+    .aod-accommodation-content h4 {
+      margin-bottom: 14px;
+      color: var(--primary-color);
+      font-family: "Oswald", sans-serif;
+      font-size: 28px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .aod-accommodation-content p {
+      margin-bottom: 16px;
+    }
+
+    .aod-accommodation-content li {
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    .aod-accommodation-content li i {
+      margin-right: 8px;
+      color: var(--secondary-color);
+    }
+
+    .aod-accommodation-content .btn {
+      align-self: flex-start;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 991.98px) {
+      .aod-video-hero {
+        height: 55vh;
+        min-height: 360px;
+      }
+
+      .aod-accommodation-card,
+      .aod-accommodation-card--reverse {
+        flex-direction: column;
+      }
+
+      .aod-accommodation-image,
+      .aod-accommodation-content {
+        width: 100%;
+      }
+
+      .aod-accommodation-image {
+        min-height: 250px;
+      }
+
+      .aod-accommodation-content {
+        padding: 28px 24px;
+      }
+    }
+  </style>
+  <style>
+  /* ===== ART OF DUNES GOLD THEME ===== */
+
+  
+
+  .aod-navbar {
+    background-color: #f7f5bc !important;
+    border-bottom: 2px solid #C99518 !important;
+  }
+
+  .aod-navbar > .container {
+    background-color: #f7f5bc !important;
+  }
+
+  .aod-navbar .navbar-collapse,
+  #aodNavContent {
+    background-color: #f7f5bc !important;
+  }
+
+  .aod-nav-list .nav-link {
+    color: #3b2a16 !important;
+    background-color: transparent !important;
+  }
+
+  .aod-nav-list .nav-link:hover,
+  .aod-nav-list .nav-link.active {
+    color: #8a5a12 !important;
+    background-color: rgba(255, 255, 255, 0.18) !important;
+  }
+
+  /* Mobile MENU button */
+  .aod-toggler {
+    background-color: #f7f5bc !important;
+    border: 1px solid #f7f5bc !important;
+  }
+
+  .aod-toggler-label {
+    color: #3b2a16 !important;
+  }
+
+  .aod-toggler .aod-toggler-icon {
+    filter: none !important;
+  }
+</style>
+<style>
+  /* ===== ART OF DUNES GOLD THEME ===== */
+
+  /* Upper Header */
+  .aod-top-bar {
+    background-color: #f7f5bc !important;
+    border-bottom: 1px solid #f7f5bc !important;
+  }
+
+  /* Navbar */
+  .aod-navbar {
+    background-color: #f7f5bc !important;
+    border-bottom: 2px solid #f7f5bc !important;
+  }
+
+  .aod-navbar > .container {
+    background-color: #f7f5bc !important;
+  }
+
+  .aod-navbar .navbar-collapse,
+  #aodNavContent {
+    background-color: #f7f5bc !important;
+  }
+
+  /* Header Title */
+  .aod-title-main {
+    color: #3b2a16 !important;
+  }
+
+  /* Navigation Links */
+  .aod-nav-list .nav-link {
+    color: #3b2a16 !important;
+    background-color: transparent !important;
+  }
+
+  .aod-nav-list .nav-link:hover,
+  .aod-nav-list .nav-link.active {
+    color: #8a5a12 !important;
+    background-color: rgba(255, 255, 255, 0.18) !important;
+  }
+
+  /* Mobile MENU button */
+  .aod-toggler {
+    background-color: #E7B526 !important;
+    border: 1px solid #C99518 !important;
+  }
+
+  .aod-toggler-label {
+    color: #3b2a16 !important;
+  }
+
+  /* Dropdown */
+  .aod-dropdown-menu {
+    background-color: #f6f4f1 !important;
+    border: 1px solid #fcfaf5 !important;
+  }
+
+  .aod-dropdown-menu .dropdown-item {
+    color: #3b2a16 !important;
+  }
+
+  .aod-dropdown-menu .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: #3b2a16 !important;
+  }
+</style>
+
+</head>
+
+<body class="aod-intro-active">
+  <!-- Home-page intro video only; separate from the looping hero video below. -->
+  <div class="aod-home-intro" id="aodHomeIntro" aria-hidden="true">
+    <video class="aod-home-intro__video" id="aodHomeIntroVideo" autoplay muted playsinline preload="auto">
+      <source src="images/loading.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- HEADER SECTION -->
+<header class="aod-site-header">
+  
+  <!-- TOP BAR & MOBILE HEADER -->
+  <div class="aod-top-bar">
+    <div class="container">
+      <div class="aod-top-bar-wrapper">
+        
+        <!-- Left: Logo -->
+        <div class="aod-brand-logo">
+          <a href="index.html" class="aod-logo-circle">
+            <img src="images/logo.png" alt="Art of Dunes Camp Logo">
+          </a>
+        </div>
+
+        <!-- Center: Title -->
+        <div class="aod-brand-title text-center">
+          <h1 class="aod-title-main">ART OF DUNES CAMP</h1>
+        </div>
+
+        <!-- Right: Social Links -->
+       <div class="social-icons-wrapper">
+
+  <!-- Facebook -->
+  <a
+    href="https://www.facebook.com/ArtofDunesCamp/"
+    target="_blank"
+    rel="noopener"
+    title="Facebook"
+  >
+    <img src="images/Home/icons/facebook.png" alt="Facebook">
+  </a>
+
+  <!-- WhatsApp -->
+  
+
+  <!-- Instagram -->
+  <a
+    href="https://www.instagram.com/artofdunes_camp"
+    target="_blank"
+    rel="noopener"
+    title="Instagram"
+  >
+    <img src="images/Home/icons/instagram.png" alt="Instagram">
+  </a>
+
+  <!-- Gmail -->
+  <a
+    href="mailto:artofdunescamps@gmail.com"
+    title="Gmail"
+  >
+  </a>
+
+</div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+ <!-- NAVIGATION BAR -->
+<nav class="navbar navbar-expand-lg aod-navbar">
+  <div class="container">
+    
+    <!-- Mobile Hamburger Toggle Button (Desktop par hidden rehega) -->
+    <button class="navbar-toggler aod-toggler w-100 py-2 my-1 d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#aodNavContent" aria-controls="aodNavContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="aod-toggler-label">MENU</span>
+      <span class="navbar-toggler-icon aod-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="aodNavContent">
+      <ul class="navbar-nav aod-nav-list">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="why-jaisalmer.html">Why Jaisalmer</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="adventure.html">Adventures</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="aodPackagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Packages
+          </a>
+          <ul class="dropdown-menu aod-dropdown-menu" aria-labelledby="aodPackagesDropdown">
+            <!-- <li><a class="dropdown-item" href="maharaja-package.html" target="_blank">Maharaja Packages</a></li> -->
+            <li><a class="dropdown-item" href="maharani-package.html" target="_blank"> Signature Tent</a></li>
+            <li><a class="dropdown-item" href="yuvraj-package.html" target="_blank">Classic Tent</a></li>
+            <!-- <li><a class="dropdown-item" href="mobile-tent.html" target="_blank">Soldier Mobile Tent</a></li> -->
+            <!-- <li><a class="dropdown-item" href="royal-odc.html" target="_blank"> (Day Safari)</a></li> -->
+            <li><a class="dropdown-item" href="rajasthani-dance-dinner.html" target="_blank">Rajasthani Dance & Dinner</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="events.html">Events & Tour</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gallery.html">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+  <!-- HERO SLIDER SECTION -->
+    <div class="aod-hero-slider">
+      <div class="aod-video-hero">
+        <video class="aod-hero-video" autoplay muted loop playsinline preload="metadata" poster="images/Home/bg-1.jpg" aria-hidden="true">
+          <!-- Temporary example source: replace this URL with the supplied camp video when available. -->
+          <source src="./images/Home/hero (3).mp4" type="video/mp4">
+        </video>
+        <div class="aod-video-overlay"></div>
+        <div class="aod-caption container">
+          <span class="aod-subtitle">Art Of Dunes Camp</span>
+          <h2 class="aod-title">Feel and Enjoy the Sand Dunes &amp; Desert</h2>
+        </div>
+      </div>
+    </div>
+
+</header>
+
+<!-- MOBILE FLOATING SOCIAL ICONS -->
+<div class="aod-mobile-social">
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/ArtofDunesCamp/"
+       target="_blank"
+       rel="noopener"
+       aria-label="Facebook">
+        <img src="images/Home/icons/facebook.png" alt="Facebook">
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/artofdunes_camp"
+       target="_blank"
+       rel="noopener"
+       aria-label="Instagram">
+        <img src="images/Home/icons/instagram.png" alt="Instagram">
+    </a>
+
+</div>
+
+  <section class="section-padding" id="about-us ">
+    <div class="container">
+      <div class="heading-title text-center">
+        <h5 class="text-capitalize font-weight-bold color-secondary">Art of Dunes Camp</h5>
+        <h3 class="text-uppercase font-weight-bold">Experience the Soul of the Thar</h3>
+        <div class="c-line-center c-theme-bg"></div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-lg-6">
+    <div class="about-images-premium">
+
+        <div class="about-img about-img-1">
+            <img src="./images/Home/about1.jpeg" alt="Art of Dunes Camp">
+        </div>
+
+        <div class="about-img about-img-2">
+            <img src="./images/Home/about2.jpeg" alt="Art of Dunes Camp">
+        </div>
+
+        <div class="about-img about-img-3">
+            <img src="./images/Home/about3.jpeg" alt="Art of Dunes Camp">
+        </div>
+
+    </div>
+</div>
+      <div class="col-12 col-md-12 col-lg-6">
+    <div class="about-content fs-14 font-weight-bold">
+
+        <p class="mt-5 mt-lg-0">
+            Welcome to <strong>Art of Dunes</strong>, a beautiful desert camp
+            where the timeless charm of Rajasthan meets the comfort and warmth
+            of a memorable desert stay. Set amidst the golden dunes of Jaisalmer,
+            our camp offers a peaceful escape where guests can experience the
+            natural beauty, rich traditions, and warm hospitality of the Thar
+            Desert.
+        </p>
+
+        <p>
+            At Art of Dunes, every stay is designed to give you an authentic
+            desert experience without compromising on comfort. Relax in our
+            thoughtfully designed tents, enjoy traditional Rajasthani cuisine,
+            and spend your evenings surrounded by golden sands, beautiful
+            sunsets, folk music, and cultural performances beneath the open sky.
+        </p>
+
+        <p>
+            Whether you are looking for a peaceful getaway, an adventurous
+            desert escape, or a memorable holiday with family and friends,
+            there is something for everyone. From thrilling desert safaris,
+            dune adventures, and camel experiences to relaxing evenings filled
+            with Rajasthani folk performances and traditional hospitality, we
+            bring together the best experiences of Jaisalmer in one place.
+        </p>
+
+        <p>
+            Our location also makes it convenient to explore the unique
+            attractions and heritage of Jaisalmer while returning to the calm
+            atmosphere of the desert camp. We aim to make every moment special,
+            from the first welcome to the final sunset of your stay.
+        </p>
+
+        <p class="mb-0 color-secondary">
+            <strong>
+                A stay where golden dunes, royal hospitality, vibrant
+                Rajasthani culture, adventure, and unforgettable memories
+                come together.
+            </strong>
+        </p>
+
+    </div>
+</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rooms section-padding  bg-white" id="accommodation">
+    <h2 class="display-none">&nbsp;</h2>
+    <div class="container">
+      <div class="row" id="Room">
+        <div class="col-sm-12">
+          <div class="heading-title text-center">
+            <h5 class="text-capitalize font-weight-bold color-secondary">Art of Dunes Camp</h5>
+            <h3 class="text-uppercase font-weight-bold">Accomodation</h3>
+
+            <div class="c-line-center c-theme-bg"></div>
+          </div>
+        </div>
+        <div class="col-12 aod-accommodation-card mt30">
+          <div class="aod-accommodation-image">
+            <img src="images/Home/maharani-stay.jpg" alt=" Signature Tent at Art of Dunes" class="img-fluid" />
+          </div>
+          <div class="aod-accommodation-content">
+            <h4> Signature Tent</h4>
+            <p>Settle into a comfortable desert stay that brings the warmth of Art of Dunes together with the beauty of Jaisalmer's golden landscape.</p>
+            <ul class="list-unstyled">
+  <li><i class="fa fa-check-circle"></i>Attached Toilet &amp; Bathroom</li>
+  <li><i class="fa fa-check-circle"></i>Double Occupied Bed</li>
+  <li><i class="fa fa-check-circle"></i>Table &amp; Chair Available</li>
+  <li><i class="fa fa-check-circle"></i>Split AC Available</li>
+  <li><i class="fa fa-check-circle"></i>Geyser Available</li>
+</ul>
+<a
+  title="Enquire about the Royal Experience on WhatsApp"
+  href="https://wa.me/916376977737?text=Hi%20Art%20of%20Dunes%2C%20I%20would%20like%20to%20enquire%20about%20the%20Royal%20Experience."
+  target="_blank"
+  rel="noopener"
+  style="
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #25D366 !important;
+    color: #ffffff !important;
+    border: 1px solid #25D366 !important;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+  "
+>
+  Book Now
+</a>          </div>
+        </div>
+
+        <div class="col-12 aod-accommodation-card aod-accommodation-card--reverse mt30">
+          <div class="aod-accommodation-image">
+            <img src="images/Home/swiss-tent-stay.jpg" alt="Classic Tent at Art of Dunes" class="img-fluid" />
+          </div>
+          <div class="aod-accommodation-content">
+            <h4>Classic Tent</h4>
+            <p>Enjoy a relaxed tent stay designed for guests who want to experience the desert in comfort and ease.</p>
+           <ul class="list-unstyled">
+  <li><i class="fa fa-check-circle"></i>Attached Toilet &amp; Bathroom</li>
+  <li><i class="fa fa-check-circle"></i>Double Occupied Bed</li>
+  <li><i class="fa fa-check-circle"></i>Table &amp; Chair Available</li>
+  <li><i class="fa fa-check-circle"></i>Split AC Available</li>
+  <li><i class="fa fa-check-circle"></i>Geyser Available</li>
+</ul>
+<a
+  title="Enquire about the Royal Experience on WhatsApp"
+  href="https://wa.me/916376977737?text=Hi%20Art%20of%20Dunes%2C%20I%20would%20like%20to%20enquire%20about%20the%20Royal%20Experience."
+  target="_blank"
+  rel="noopener"
+  style="
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #25D366 !important;
+    color: #ffffff !important;
+    border: 1px solid #25D366 !important;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+  "
+>
+  Book Now
+</a>          </div>
+        </div>
+
+        <div class="col-12 aod-accommodation-card mt30">
+          <div class="aod-accommodation-image">
+            <img src="images/Home/jaisalmer-not-accomodation.jpg" alt=" desert experience" class="img-fluid" />
+          </div>
+          <div class="aod-accommodation-content">
+            <!-- <h4></h4> -->
+<p>Enjoy a memorable desert evening with a welcome drink, Jeep Safari, Camel Safari, Rajasthani Dance, City Sightseeing, and dinner.</p> 
+<ul class="list-unstyled">
+  <li><i class="fa fa-check-circle"></i>Welcome Drink</li>
+  <li><i class="fa fa-check-circle"></i>Evening Snacks</li>
+  <li><i class="fa fa-check-circle"></i>Rajasthani Dance</li>
+  <li><i class="fa fa-check-circle"></i>Dinner</li>
+  <li><i class="fa fa-check-circle"></i>City Sightseeing</li>
+</ul>
+<a
+  title="Enquire about the Royal Experience on WhatsApp"
+  href="https://wa.me/916376977737?text=Hi%20Art%20of%20Dunes%2C%20I%20would%20like%20to%20enquire%20about%20the%20Royal%20Experience."
+  target="_blank"
+  rel="noopener"
+  style="
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #25D366 !important;
+    color: #ffffff !important;
+    border: 1px solid #25D366 !important;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+  "
+>
+  Book Now
+</a>          </div>
+        </div>
+
+        <div class="col-12 aod-accommodation-card aod-accommodation-card--reverse mt30">
+          <div class="aod-accommodation-image">
+            <img src="images/Home/jaisalmer-dance.jpg" alt="Rajasthani dance and dinner experience" class="img-fluid" />
+          </div>
+          <div class="aod-accommodation-content">
+            <h4>Rajasthani Dance &amp; Dinner</h4>
+            <p>Step into an evening shaped by Rajasthan's living culture and the calm of the desert after sunset.</p>
+           <ul class="list-unstyled">
+  <li><i class="fa fa-check-circle"></i>Traditional Rajasthani Folk Dance</li>
+  <li><i class="fa fa-check-circle"></i>Live Cultural Performance</li>
+  <li><i class="fa fa-check-circle"></i>Traditional Rajasthani Music</li>
+  <li><i class="fa fa-check-circle"></i>Desert Evening Entertainment</li>
+  <li><i class="fa fa-check-circle"></i>Authentic Cultural Experience</li>
+</ul>
+<a
+  title="Enquire about the Royal Experience on WhatsApp"
+  href="https://wa.me/916376977737?text=Hi%20Art%20of%20Dunes%2C%20I%20would%20like%20to%20enquire%20about%20the%20Royal%20Experience."
+  target="_blank"
+  rel="noopener"
+  style="
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #25D366 !important;
+    color: #ffffff !important;
+    border: 1px solid #25D366 !important;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+  "
+>
+  Book Now
+</a>          </div>
+        </div>
+        <div class="col-12">
+          <p class="text-center mt-3">Discover the desert through comfortable tent stays and memorable evenings inspired by Rajasthan's vibrant culture.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-camp section-padding  bg-white" id="best-desertsafaricamp">
+    <div class="container-fluid px-0">
+      <div class="best-camp-block text-center d-flex justify-content-center align-items-center">
+        <h2 class="text-uppercase">best desert safari camp in jaisalmer</h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="best-camp section-padding  bg-white" id="explore-packages">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="heading-title text-center">
+            <h5 class="text-capitalize font-weight-bold color-secondary">Art of Dunes Camp</h5>
+            <h3 class="text-uppercase font-weight-bold">Events and Tours</h3>
+            <div class="c-line-center c-theme-bg"></div>
+            <p>Make the most out of your Jaisalmer trip by enjoying dinner on dunes with your loved ones inArt of Dunes Camp
+              . We provide and serve pure veg Rajasthani dinner to our guests. In this most magical of
+              setting we present you with a true representation of a nomadic hunt menu.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="owl-carousel owl-theme" id="travel-packages-carousel">
+          <div class="item">
+            <img src="images/Home/jaisalmer-honeymoon.jpg" alt="honeymoon-tour" />
+            <div class="overlay">
+              <span>Honeymoon</span>
+            </div>
+          </div>
+          <div class="item">
+            <img src="images/Home/corporate-event.jpg" alt="corporate-tour" />
+            <div class="overlay">
+              <span>Corporate Events</span>
+            </div>
+          </div>
+          <div class="item">
+            <img src="images/Home/education-tour.jpg" alt="education-tour" />
+            <div class="overlay">
+              <span>Educational Tours</span>
+            </div>
+          </div>
+          <div class="item">
+            <img src="images/Home/pre-wedding.jpg" alt="prewedding-tour" />
+            <div class="overlay">
+              <span> Pre Wedding-Shoot </span>
+            </div>
+          </div>
+          <div class="item">
+            <img src="images/Home/adshoot-jaisalmer.jpeg" alt="anniversary-celebration" />
+            <div class="overlay">
+              <span> Ad/Film Shoot  </span>
+            </div>
+          </div>
+          <div class="item">
+            <img src="images/Home/anniversary-celebration.jpg" alt="anniversary-celebration" />
+            <div class="overlay">
+              <span> Birth Day and Anniversary Celebration </span>
+             
+            </div>
+          </div>
+        
+        </div>
+      </div>
+      <div class="col-sm-12 text-center py-5">
+        <button class="btn btn-type-1 text-uppercase px-3 font-weight-bold btn-secondary text-white">
+         <a class="text-white" href="events.html" target="_blank">Show all Events</a> 
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="amenities section-padding bg-white" id="amenities">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 mb-md-5 mb-sm-3">
+          <div class="heading-title text-center">
+            <h5 class="text-capitalize font-weight-bold color-secondary">Art of Dunes Camp</h5>
+            <h3 class="text-uppercase font-weight-bold">Our Amenities</h3>
+            <div class="c-line-center c-theme-bg"></div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 text-center">
+          <div class="amenties-block">
+            <img src="images/Home/icons/24x7_electricity.png" class="img-fluid">
+          </div>
+          <h5 class="mt-3">24x7 Electricity</h5>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 text-center">
+          <div class="amenties-block">
+            <img src="images/Home/icons/24x7_room_service.png" class="img-fluid">
+          </div>
+          <h5 class="mt-3">24x7 Room Service</h5>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 mt-sm-5 mt-md-0  text-center">
+          <div class="amenties-block">
+            <img src="images/Home/icons/camel_safari.png" class="img-fluid">
+          </div>
+          <h5 class="mt-3">Camel Safari</h5>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 mt-sm-5 mt-md-5 mt-lg-0 text-center">
+          <div class="amenties-block">
+            <img src="images/Home/icons/city_sightseeing.png" class="img-fluid">
+          </div>
+          <h5 class="mt-3">City Sightseeing</h5>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 mt-5 text-center ">
+          <div class="amenties-block">
+            <img src="images/Home/icons/dune_dining.png" class="img-fluid">
+          </div>
+          <h5 class="mt-3">Dune Dining</h5>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 mt-5 text-center">
+          <div class="amenties-block">
+            <img src="images/Home/icons/STD_facilities.png" class="img-fluid">
+          </div>
+          <h5 class="mt-3">STD Facilities</h5>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 mt-5 text-center">
+          <div class="amenties-block">
+            <img src="images/Home/icons/overnight-stay.png" class="img-fluid">
+          </div>
+          <h5 class="mt-3">overnight Stay</h5>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 mt-5 text-center">
+          <div class="amenties-block">
+            <img src="images/Home/icons/jeep_safari.png" class="img-fluid">
+          </div>
+          <h5 class="mt-3">Jeep Safari</h5>
+        </div>
+
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="outdoor-activities section-padding  " id="outdoor-activities">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="heading-title text-center">
+            <h5 class="text-capitalize font-weight-bold color-secondary">Art of Dunes Camp</h5>
+            <h3 class="text-uppercase font-weight-bold">outdoor activities in jaisalmer</h3>
+            <div class="c-line-center c-theme-bg"></div>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="outdoor-activites-container">
+            <div class="row">
+              <div class="col-md-4 col-lg-3 col-6 outdoor-activites-block">
+                <a href="https://wa.me/916376977737?text=Hi%20Art%20of%20Dunes%2C%20I%20would%20like%20to%20enquire%20about%20outdoor%20activities." target="_blank" rel="noopener">
+                  <div class="outdoor-activites-img activity-1">
+                    <h4>Boating</h4>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4 col-lg-3 col-6 outdoor-activites-block">
+                <a href="https://wa.me/916376977737?text=Hi%20Art%20of%20Dunes%2C%20I%20would%20like%20to%20enquire%20about%20outdoor%20activities." target="_blank" rel="noopener">
+                  <div class="outdoor-activites-img activity-2">
+                    <h4>Folk dance</h4>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4 col-lg-3 col-6 mt-xs-3 mt-md-0 outdoor-activites-block" >
+                <a href="https://wa.me/916376977737?text=Hi%20Art%20of%20Dunes%2C%20I%20would%20like%20to%20enquire%20about%20outdoor%20activities." target="_blank" rel="noopener">
+                  <div class="outdoor-activites-img activity-3">
+                    <h4>Jeep Safari</h4>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4 col-lg-3 col-6 mt-xs-3 mt-md-3 mt-lg-0 outdoor-activites-block">
+                <a href="https://wa.me/916376977737?text=Hi%20Art%20of%20Dunes%2C%20I%20would%20like%20to%20enquire%20about%20outdoor%20activities." target="_blank" rel="noopener">
+                  <div class="outdoor-activites-img activity-4">
+                    <h4>Puppet Show</h4>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4 col-lg-3 col-6 mt-3 outdoor-activites-block">
+                <a href="https://wa.me/916376977737?text=Hi%20Art%20of%20Dunes%2C%20I%20would%20like%20to%20enquire%20about%20outdoor%20activities." target="_blank" rel="noopener">
+                  <div class="outdoor-activites-img activity-5">
+                    <h4>Quad Bike</h4>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4 col-lg-3 col-6 mt-3 outdoor-activites-block">
+                <a href="https://wa.me/916376977737?text=Hi%20Art%20of%20Dunes%2C%20I%20would%20like%20to%20enquire%20about%20outdoor%20activities." target="_blank" rel="noopener">
+                  <div class="outdoor-activites-img activity-6">
+                    <h4>Shopping</h4>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4 col-lg-3 col-6 mt-3 outdoor-activites-block">
+                <a href="https://wa.me/916376977737?text=Hi%20Art%20of%20Dunes%2C%20I%20would%20like%20to%20enquire%20about%20outdoor%20activities." target="_blank" rel="noopener">
+                  <div class="outdoor-activites-img activity-7">
+                    <h4> Paragliding</h4>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4 col-lg-3 col-6 mt-3 outdoor-activites-block">
+                <a href="https://wa.me/916376977737?text=Hi%20Art%20of%20Dunes%2C%20I%20would%20like%20to%20enquire%20about%20outdoor%20activities." target="_blank" rel="noopener">
+                  <div class="outdoor-activites-img activity-8">
+                    <h4>Camel Safari</h4>
+                  </div>
+                </a>
+              </div>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+<section class="home-events section-padding bg-white">
+  <div class="container">
+
+    <div class="heading-title text-center mb-4">
+      <h5 class="text-capitalize font-weight-bold color-secondary">
+        Art of Dunes Camp
+      </h5>
+      <h3 class="text-uppercase font-weight-bold">Events &amp; Tour</h3>
+      <div class="c-line-center c-theme-bg"></div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card h-100">
+          <img
+            src="images/events/Honymoon.jpeg"
+            class="card-img-top"
+            alt="Jaisalmer Honeymoon Tour"
+          >
+          <div class="card-body text-center">
+            <h4>Honeymoon Tour</h4>
+            <a href="events.html"
+               class="btn text-uppercase font-weight-bold"
+               style="background-color:#25D366;color:#fff;">
+              Explore
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card h-100">
+          <img
+            src="images/Home/education-tour.jpg"
+            class="card-img-top"
+            alt="Educational Tours"
+          >
+          <div class="card-body text-center">
+            <h4>Educational Tours</h4>
+            <a href="events.html"
+               class="btn text-uppercase font-weight-bold"
+               style="background-color:#25D366;color:#fff;">
+              Explore
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card h-100">
+          <img
+            src="images/events/pre-wedding.jpg"
+            class="card-img-top"
+            alt="Pre-Wedding Shoot"
+          >
+          <div class="card-body text-center">
+            <h4>Pre-Wedding Shoot</h4>
+            <a href="events.html"
+               class="btn text-uppercase font-weight-bold"
+               style="background-color:#25D366;color:#fff;">
+              Explore
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-3">
+      <a href="events.html"
+         class="btn text-uppercase font-weight-bold"
+         style="background-color:#25D366;color:#fff;">
+        View All Events &amp; Tour
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- HOME PAGE MAP SECTION -->
+<section class="home-map-section section-padding">
+    <div class="container">
+
+        <div class="heading-title text-center mb-4">
+            <h5 class="text-capitalize font-weight-bold color-secondary">
+                Art of Dunes Camp
+            </h5>
+
+            <h3 class="text-uppercase font-weight-bold">
+                Find Us
+            </h3>
+
+            <div class="c-line-center c-theme-bg"></div>
+        </div>
+
+        <div class="home-map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12837.920933551703!2d70.5934061554478!3d26.89400284085548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1787145008875!5m2!1sen!2sin"
+                width="100%"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+        </div>
+
+    </div>
+</section>
+
+ <footer class="aod-footer">
+
+    <div class="container">
+
+        <!-- Footer Main Content -->
+        <div class="row aod-footer-main">
+
+            <!-- Brand / About -->
+            <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+
+                <div class="aod-footer-logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Art of Dunes Camp Logo">
+                    </a>
+                </div>
+
+                <h2 class="aod-footer-brand">
+                    ART OF DUNES CAMP
+                </h2>
+
+                <p class="aod-footer-description">
+                    Experience the magic of Jaisalmer desert life with
+                    comfortable stays, desert adventures, traditional
+                    Rajasthani culture and unforgettable moments.
+                </p>
+
+                <!-- Social Icons -->
+                <div class="aod-footer-social">
+
+                    <a href="https://www.instagram.com/artofdunes_camp"
+                       target="_blank"
+                       rel="noopener"
+                       title="Instagram">
+                        <img src="images/Home/icons/instagram.png" alt="Instagram">
+                    </a>
+
+                    <a href="https://wa.me/916376977737"
+                       target="_blank"
+                       rel="noopener"
+                       title="WhatsApp">
+                        <img src="images/Home/icons/whatsapp.png" alt="WhatsApp">
+                    </a>
+
+                    <a href="tel:+916376977737"
+                       title="Call">
+                        <span>☎</span>
+                    </a>
+
+                    <a href="mailto:artofdunescamps@gmail.com"
+                       title="Email">
+                        <img src="images/Home/icons/gmail.jpg" alt="Gmail">
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+            <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
+
+                <h3 class="aod-footer-heading">
+                    Navigation
+                </h3>
+
+                <ul class="aod-footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="why-jaisalmer.html">Why Jaisalmer</a></li>
+                    <li><a href="adventure.html">Adventures</a></li>
+                    <li><a href="maharani-package.html"> Signature Tent</a></li>
+                    <li><a href="yuvraj-package.html">Classic Tent</a></li>
+                    <li><a href="events.html">Events & Tour</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+            </div>
+
+
+            <!-- Experiences -->
+            <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
+
+                <h3 class="aod-footer-heading">
+                    Experiences
+                </h3>
+
+                <ul class="aod-footer-links">
+                    <li><a href="adventure.html">Desert Safari</a></li>
+                    <li><a href="adventure.html">Sand Dunes</a></li>
+                    <li><a href="events.html">Events & Tour</a></li>
+                    <li><a href="rajasthani-dance-dinner.html">Rajasthani Dance & Dinner</a></li>
+                    <li><a href="royal-odc.html"></a></li>
+                    <li><a href="gallery.html">Desert Experiences</a></li>
+                </ul>
+
+            </div>
+
+
+            <!-- Contact Info -->
+            <div class="col-lg-4 col-md-6">
+
+                <h3 class="aod-footer-heading">
+                    Contact Info
+                </h3>
+
+                <div class="aod-contact-item">
+                    <span class="aod-contact-icon">📍</span>
+                    <p>
+                        KHASARA NO 915/621, TEHSIL SAM, VILLAGE SALKHA,
+                        NEAR SALKHA BRANCH POST OFFICE, SALKHA,
+                        DISTRICT JAISALMER, RAJASTHAN - 345001
+                    </p>
+                </div>
+
+                <div class="aod-contact-item">
+                    <span class="aod-contact-icon">☎</span>
+                    <p>
+                        <a href="tel:+916375348556">
+                            Kuldeep Singh Rathore: 6375348556
+                        </a>
+                    </p>
+                </div>
+
+                <div class="aod-contact-item">
+                    <span class="aod-contact-icon">☎</span>
+                    <p>
+                        <a href="tel:+916376977737">
+                            Shairendra Singh Rawlot: 6376977737
+                        </a>
+                    </p>
+                </div>
+
+                <div class="aod-contact-item">
+                    <span class="aod-contact-icon">💬</span>
+                    <p>
+                        <a href="https://wa.me/916376977737"
+                           target="_blank"
+                           rel="noopener">
+                            WhatsApp Chat
+                        </a>
+                    </p>
+                </div>
+
+                <div class="aod-contact-item">
+                    <span class="aod-contact-icon">✉</span>
+                    <p>
+                        <a href="mailto:artofdunescamps@gmail.com">
+                            artofdunescamps@gmail.com
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+      <!-- Map -->
+        
+
+
+        <!-- Bottom -->
+        <div class="aod-footer-bottom">
+
+            <p>
+                © 2026 Art of Dunes Camp. All Rights Reserved.
+            </p>
+
+            <div class="aod-footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cancellation Policy</a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Mobile Floating Contact Bar -->
+<div class="aod-mobile-contact-bar">
+
+    <a href="https://wa.me/916376977737"
+       target="_blank"
+       rel="noopener"
+       class="aod-mobile-contact-btn">
+
+        <img src="images/Home/icons/whatsapp.png" alt="WhatsApp">
+        <span>WhatsApp</span>
+    </a>
+
+    <a href="tel:+916376977737"
+       class="aod-mobile-contact-btn aod-call-btn">
+
+        <span class="aod-call-icon">☎</span>
+        <span>Call</span>
+    </a>
+
+</div>
+
+<!-- Mobile Floating Contact Bar -->
+<div class="aod-mobile-contact-bar">
+
+    <a href="https://wa.me/916376977737"
+       target="_blank"
+       rel="noopener"
+       class="aod-mobile-contact-btn">
+
+        <img src="images/Home/icons/whatsapp.png" alt="WhatsApp">
+        <span>WhatsApp</span>
+    </a>
+
+    <a href="tel:+916376977737"
+       class="aod-mobile-contact-btn aod-call-btn">
+
+        <span class="aod-call-icon">☎</span>
+        <span>Call</span>
+    </a>
+
+</div>
+
+
+<!-- Desktop Floating WhatsApp -->
+<a href="https://wa.me/916376977737"
+   class="aod-floating-whatsapp"
+   target="_blank"
+   rel="noopener"
+   title="WhatsApp">
+    <img src="images/Home/icons/whatsapp.png" alt="WhatsApp">
+</a>
+
+<!-- Desktop Floating Call -->
+<a href="tel:+916376977737"
+   class="aod-floating-call"
+   title="Call">
+    ☎
+</a>
+</footer>
+
+<!-- FLOATING WHATSAPP BUTTON (Bottom Right) -->
+<!-- <div class="social-connect">
+  <ul class="footer-list-2 w-100 pl-0">
+    <li class="footer-list-item list-unstyled">
+      <a href="https://wa.me/916376977737?text=Hi%20artofdunes%20desert%20safari,%20I%20want%20to%20know%20more%20about%20your%20camp" 
+         target="_blank" 
+         class="footer-list-link" 
+         title="Chat on WhatsApp">
+        <img src="images/Home/icons/whatsapp.png" alt="WhatsApp" class="img-fluid floating-wa-icon" />
+      </a>
+    </li>
+  </ul>
+</div> -->
+
+<!-- FLOATING CALL BUTTON -->
+<div class="call-artofdunes-desert-safari">
+  <div class="reservation">
+    <a href="tel:+916376977737">
+      <div class="icon d-flex justify-content-center align-items-center">
+        <i class="fa fa-phone" aria-hidden="true"></i>
+      </div>
+      <div class="call"><span>+916376977737</span><br>Reservation</div>
+    </a>
+  </div>
+</div>  
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/owl.carousel.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <script>
+
+    (function () {
+      var intro = document.getElementById("aodHomeIntro");
+      var introVideo = document.getElementById("aodHomeIntroVideo");
+      var hasClosed = false;
+
+      function closeIntro() {
+        if (hasClosed || !intro) return;
+
+        hasClosed = true;
+        intro.classList.add("is-leaving");
+        document.body.classList.remove("aod-intro-active");
+
+        intro.addEventListener("transitionend", function (event) {
+          if (event.propertyName === "opacity") intro.remove();
+        }, { once: true });
+      }
+
+      if (!introVideo) {
+        closeIntro();
+        return;
+      }
+
+      // The intro duration is controlled by the asset itself (about 5 seconds).
+      introVideo.addEventListener("ended", closeIntro, { once: true });
+      // A missing or unsupported video must never prevent access to the Home page.
+      introVideo.addEventListener("error", closeIntro, { once: true });
+
+      var playPromise = introVideo.play();
+      if (playPromise && typeof playPromise.catch === "function") {
+        playPromise.catch(closeIntro);
+      }
+    }());
+
+    $("#travel-packages-carousel").owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        600: {
+          items: 2,
+        },
+        1000: {
+          items: 3,
+        },
+      },
+    });
+
+  </script>
+</body>
+
+</html>
