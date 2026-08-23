@@ -6600,3 +6600,1263 @@ body.aod-intro-active .aod-mobile-social {
     }
 
 }
+
+/* =========================================================
+   FINAL MOBILE HEADER
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    /* =========================
+       HEADER
+       ========================= */
+
+    .aod-site-header {
+        position: relative !important;
+        width: 100% !important;
+        overflow: visible !important;
+    }
+
+
+    /* =========================
+       TOP HEADER
+       ========================= */
+
+    .aod-site-header .aod-top-bar {
+        width: 100% !important;
+        height: 105px !important;
+        min-height: 105px !important;
+
+        background: #f7f5bc !important;
+
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .aod-site-header .aod-top-bar .container {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        height: 105px !important;
+
+        padding: 0 12px !important;
+        margin: 0 !important;
+    }
+
+
+    /* =========================
+       TOP BAR LAYOUT
+       ========================= */
+
+    .aod-top-bar-wrapper {
+        width: 100% !important;
+        height: 105px !important;
+
+        display: flex !important;
+        align-items: center !important;
+
+        flex-wrap: nowrap !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    /* =========================
+       LOGO
+       ========================= */
+
+    .aod-brand-logo {
+        width: 90px !important;
+        min-width: 90px !important;
+        max-width: 90px !important;
+
+        flex: 0 0 90px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .aod-logo-circle {
+        width: 85px !important;
+        height: 85px !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .aod-logo-circle img {
+        width: 85px !important;
+        height: 85px !important;
+
+        max-width: 85px !important;
+        max-height: 85px !important;
+
+        object-fit: contain !important;
+
+        display: block !important;
+    }
+
+
+    /* =========================
+       TITLE
+       ========================= */
+
+    .aod-brand-title {
+        flex: 1 1 auto !important;
+
+        width: auto !important;
+        min-width: 0 !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        padding: 0 5px !important;
+        margin: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+    .aod-title-main {
+        width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        font-size: 18px !important;
+        line-height: 1.2 !important;
+
+        text-align: center !important;
+
+        white-space: nowrap !important;
+
+        overflow: hidden !important;
+        text-overflow: clip !important;
+    }
+
+
+    /* =========================
+       DESKTOP SOCIAL ICONS
+       HIDE ON MOBILE
+       ========================= */
+
+    .aod-top-bar-wrapper > .social-icons-wrapper {
+        display: none !important;
+    }
+
+
+    /* =====================================================
+       NAVBAR
+       Only hamburger visible in header
+       ===================================================== */
+
+    .aod-site-header .aod-navbar {
+        position: absolute !important;
+
+        top: 0 !important;
+        right: 0 !important;
+
+        width: 65px !important;
+        height: 105px !important;
+
+        min-height: 105px !important;
+
+        padding: 0 !important;
+        margin: 0 !important;
+
+        background: transparent !important;
+
+        border: none !important;
+
+        z-index: 10000 !important;
+    }
+
+    .aod-site-header .aod-navbar > .container {
+        width: 65px !important;
+        height: 105px !important;
+
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+
+    /* =========================
+       HAMBURGER
+       ========================= */
+
+    .aod-site-header .aod-toggler {
+        width: 50px !important;
+        height: 50px !important;
+
+        position: absolute !important;
+
+        top: 27px !important;
+        right: 3px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        background: transparent !important;
+
+        border: 0 !important;
+        outline: none !important;
+        box-shadow: none !important;
+
+        border-radius: 0 !important;
+    }
+
+    /* Remove MENU text */
+    .aod-site-header .aod-toggler-label {
+        display: none !important;
+    }
+
+
+    /* =========================
+       HAMBURGER LINES
+       ========================= */
+
+    .aod-site-header .aod-toggler-icon {
+        width: 38px !important;
+        height: 4px !important;
+
+        display: block !important;
+
+        background-image: none !important;
+        background-color: #b8893c !important;
+
+        border-radius: 2px !important;
+
+        box-shadow:
+            0 11px 0 #b8893c,
+            0 22px 0 #b8893c !important;
+    }
+
+
+    /* =====================================================
+       MOBILE MENU
+       ===================================================== */
+
+    .aod-site-header #aodNavContent {
+        position: absolute !important;
+
+        top: 105px !important;
+        left: 0 !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 10px !important;
+
+        background: #f7f5bc !important;
+
+        z-index: 9999 !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    .aod-site-header #aodNavContent .aod-nav-list {
+        width: 100% !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        background: #f7f5bc !important;
+
+        gap: 0 !important;
+    }
+
+
+    /* =========================
+       NORMAL MENU ITEMS
+       ========================= */
+
+    .aod-site-header #aodNavContent .nav-item {
+        width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        background: #f7f5bc !important;
+    }
+
+    .aod-site-header #aodNavContent > .aod-nav-list > .nav-item > .nav-link {
+        width: 100% !important;
+
+        height: 61px !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        padding: 0 10px !important;
+        margin: 0 !important;
+
+        color: #33210f !important;
+
+        background: #f7f5bc !important;
+
+        border-bottom: 1px solid rgba(139, 90, 32, 0.13) !important;
+
+        font-size: 16px !important;
+        font-weight: 600 !important;
+
+        text-align: center !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* =====================================================
+       PACKAGES DROPDOWN
+       ===================================================== */
+
+    .aod-site-header #aodNavContent .dropdown {
+        position: relative !important;
+    }
+
+    /* CLOSED */
+    .aod-site-header #aodNavContent .dropdown-menu.aod-dropdown-menu {
+        display: none !important;
+
+        position: static !important;
+
+        width: 100% !important;
+        min-width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        background: #f7f5bc !important;
+
+        border: none !important;
+        box-shadow: none !important;
+
+        transform: none !important;
+    }
+
+    /* OPEN ONLY AFTER CLICK */
+    .aod-site-header #aodNavContent .dropdown-menu.aod-dropdown-menu.show {
+        display: block !important;
+    }
+
+    .aod-site-header #aodNavContent
+    .dropdown-menu.aod-dropdown-menu .dropdown-item {
+        width: 100% !important;
+
+        height: 52px !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        padding: 0 10px !important;
+        margin: 0 !important;
+
+        background: #f7f5bc !important;
+
+        color: #33210f !important;
+
+        border: none !important;
+
+        font-size: 15px !important;
+        font-weight: 400 !important;
+
+        text-align: center !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* =========================
+       HERO
+       ========================= */
+
+    .aod-site-header .aod-hero-slider {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .aod-site-header .aod-video-hero {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .aod-site-header .aod-hero-video {
+        width: 100% !important;
+        height: auto !important;
+
+        min-height: 0 !important;
+
+        object-fit: cover !important;
+
+        display: block !important;
+    }
+
+
+    /* =====================================================
+       MOBILE FLOATING SOCIAL ICONS
+       ===================================================== */
+
+    .aod-mobile-social {
+        display: flex !important;
+
+        position: fixed !important;
+
+        right: 15px !important;
+        bottom: 105px !important;
+
+        flex-direction: column !important;
+
+        gap: 8px !important;
+
+        z-index: 999999 !important;
+    }
+
+    .aod-mobile-social a {
+        width: 38px !important;
+        height: 38px !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .aod-mobile-social img {
+        width: 36px !important;
+        height: 36px !important;
+
+        object-fit: contain !important;
+
+        display: block !important;
+    }
+
+
+    /* Blur social icons during intro video */
+    body.aod-intro-active .aod-mobile-social {
+        filter: blur(6px) !important;
+        opacity: 0.7 !important;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    /* ===============================
+       MOBILE HEADER - FINAL FIX
+       =============================== */
+
+    .main-global-header .header-top-bar {
+        height: 105px !important;
+        min-height: 105px !important;
+        width: 100% !important;
+        padding: 0 !important;
+        background: #f7f5bc !important;
+        position: relative !important;
+    }
+
+    .main-global-header .header-top-bar .container-fluid {
+        height: 105px !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .main-global-header .header-top-bar .row {
+        position: relative !important;
+        width: 100% !important;
+        height: 105px !important;
+
+        display: block !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    /* ===============================
+       LOGO
+       =============================== */
+
+    .main-global-header .header-top-bar .col-4.text-start {
+        position: absolute !important;
+
+        left: 8px !important;
+        top: 10px !important;
+
+        width: 85px !important;
+        max-width: 85px !important;
+
+        padding: 0 !important;
+        margin: 0 !important;
+
+        z-index: 10 !important;
+    }
+
+    .main-global-header .logo-circle-frame {
+        width: 85px !important;
+        height: 85px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .main-global-header .logo-img {
+        width: 85px !important;
+        height: 85px !important;
+
+        max-width: 85px !important;
+        max-height: 85px !important;
+
+        object-fit: contain !important;
+        display: block !important;
+    }
+
+
+    /* ===============================
+       TITLE
+       =============================== */
+
+    .main-global-header .header-top-bar .col-4.text-center {
+        position: absolute !important;
+
+        left: 95px !important;
+        right: 65px !important;
+
+        top: 0 !important;
+
+        width: auto !important;
+        max-width: none !important;
+
+        height: 105px !important;
+
+        padding: 0 !important;
+        margin: 0 !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        overflow: visible !important;
+
+        z-index: 5 !important;
+    }
+
+    .main-global-header .header-brand-title {
+        width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        font-size: 12px !important;
+        line-height: 1.2 !important;
+        font-weight: 700 !important;
+
+        text-align: center !important;
+
+        white-space: nowrap !important;
+
+        overflow: visible !important;
+        text-overflow: clip !important;
+    }
+
+
+    /* ===============================
+       HIDE FACEBOOK / INSTAGRAM
+       =============================== */
+
+    .main-global-header .header-top-bar .col-4.text-end {
+        display: none !important;
+    }
+
+
+    /* ===============================
+       HAMBURGER AREA
+       =============================== */
+
+    .main-global-header .header-nav-bar {
+        position: absolute !important;
+
+        top: 0 !important;
+        right: 0 !important;
+
+        width: 65px !important;
+        height: 105px !important;
+
+        padding: 0 !important;
+        margin: 0 !important;
+
+        background: transparent !important;
+        border: none !important;
+
+        z-index: 20 !important;
+    }
+
+    .main-global-header .header-nav-bar > .container {
+        width: 65px !important;
+        height: 105px !important;
+
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+
+    /* ===============================
+       HAMBURGER
+       =============================== */
+
+    .main-global-header .navbar-toggler {
+        position: absolute !important;
+
+        top: 31px !important;
+        right: 4px !important;
+
+        width: 48px !important;
+        height: 45px !important;
+
+        padding: 0 !important;
+        margin: 0 !important;
+
+        background: transparent !important;
+
+        border: none !important;
+        box-shadow: none !important;
+        outline: none !important;
+
+        display: flex !important;
+        align-items: flex-start !important;
+        justify-content: center !important;
+    }
+
+    .main-global-header .navbar-toggler-icon {
+        width: 36px !important;
+        height: 4px !important;
+
+        background-image: none !important;
+        background-color: #b8893c !important;
+
+        border-radius: 3px !important;
+
+        box-shadow:
+            0 11px 0 #b8893c,
+            0 22px 0 #b8893c !important;
+    }
+
+}
+
+@media (max-width: 767px) {
+    h2.header-brand-title.m-0 {
+        font-size: 12px !important;
+        width: auto !important;
+        max-width: none !important;
+        white-space: nowrap !important;
+        overflow: visible !important;
+        text-overflow: clip !important;
+        transform: none !important;
+    }
+}
+
+/* =========================================================
+   ART OF DUNES CAMP - GUEST REVIEWS
+   ========================================================= */
+
+.aod-reviews-section {
+    position: relative;
+
+    width: 100%;
+
+    padding: 90px 20px;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(201, 149, 24, 0.08),
+            transparent 35%
+        ),
+        #f7f5bc;
+
+    overflow: hidden;
+}
+
+
+/* Decorative background circles */
+
+.aod-reviews-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border: 1px solid rgba(181, 129, 37, 0.15);
+
+    border-radius: 50%;
+
+    top: -150px;
+    left: -100px;
+
+    pointer-events: none;
+}
+
+.aod-reviews-section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    border: 1px solid rgba(181, 129, 37, 0.15);
+
+    border-radius: 50%;
+
+    bottom: -130px;
+    right: -80px;
+
+    pointer-events: none;
+}
+
+
+/* Main container */
+
+.aod-reviews-container {
+    position: relative;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.aod-reviews-heading {
+    max-width: 700px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+
+.aod-reviews-subtitle {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: #b8893c;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+
+.aod-reviews-heading h2 {
+    margin: 0;
+
+    color: #33210f;
+
+    font-family: "Georgia", serif;
+
+    font-size: 42px;
+
+    line-height: 1.2;
+
+    font-weight: 600;
+}
+
+
+.aod-reviews-heading p {
+    max-width: 600px;
+
+    margin: 18px auto 0;
+
+    color: #66533b;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* Divider */
+
+.aod-reviews-divider {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin: 20px auto 0;
+}
+
+
+.aod-reviews-divider span {
+    width: 55px;
+
+    height: 1px;
+
+    background: #c99518;
+}
+
+
+.aod-reviews-divider i {
+    color: #c99518;
+
+    font-size: 10px;
+
+    font-style: normal;
+}
+
+
+/* =========================================================
+   REVIEW GRID
+   ========================================================= */
+
+.aod-reviews-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================================================
+   REVIEW CARD
+   ========================================================= */
+
+.aod-review-card {
+    position: relative;
+
+    padding: 35px 30px 30px;
+
+    min-height: 330px;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    border: 1px solid rgba(201, 149, 24, 0.35);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 12px 35px rgba(65, 45, 20, 0.10);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+
+    overflow: hidden;
+}
+
+
+.aod-review-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #c99518;
+
+    box-shadow:
+        0 20px 45px rgba(65, 45, 20, 0.16);
+}
+
+
+/* Gold top line */
+
+.aod-review-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: #c99518;
+}
+
+
+/* Stars */
+
+.aod-review-stars {
+    color: #c99518;
+
+    font-size: 17px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+}
+
+
+/* Quote */
+
+.aod-review-quote {
+    position: absolute;
+
+    top: 25px;
+    right: 25px;
+
+    color: rgba(201, 149, 24, 0.15);
+
+    font-family: Georgia, serif;
+
+    font-size: 80px;
+
+    line-height: 1;
+}
+
+
+/* Review text */
+
+.aod-review-text {
+    position: relative;
+
+    margin: 0 0 28px;
+
+    color: #4b3a28;
+
+    font-family: Georgia, serif;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   AUTHOR
+   ========================================================= */
+
+.aod-review-author {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin-top: auto;
+}
+
+
+.aod-review-avatar {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #c99518;
+
+    color: #fff;
+
+    font-size: 17px;
+
+    font-weight: 700;
+}
+
+
+.aod-review-author h4 {
+    margin: 0 0 3px;
+
+    color: #33210f;
+
+    font-size: 15px;
+
+    font-weight: 700;
+}
+
+
+.aod-review-author span {
+    color: #806b50;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   SUMMARY
+   ========================================================= */
+
+.aod-review-summary {
+    max-width: 750px;
+
+    margin: 50px auto 0;
+
+    padding: 20px 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    border: 1px solid rgba(201, 149, 24, 0.3);
+
+    border-radius: 50px;
+}
+
+
+.aod-review-summary-rating {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.aod-review-summary-rating strong {
+    color: #33210f;
+
+    font-size: 32px;
+
+    line-height: 1;
+}
+
+
+.aod-summary-stars {
+    color: #c99518;
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+}
+
+
+.aod-review-summary-rating span {
+    display: block;
+
+    margin-top: 2px;
+
+    color: #806b50;
+
+    font-size: 12px;
+}
+
+
+.aod-review-summary-line {
+    width: 1px;
+
+    height: 45px;
+
+    background: rgba(201, 149, 24, 0.35);
+}
+
+
+.aod-review-summary-text {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.aod-review-summary-text strong {
+    color: #33210f;
+
+    font-size: 15px;
+}
+
+
+.aod-review-summary-text span {
+    color: #806b50;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .aod-reviews-section {
+        padding: 70px 20px;
+    }
+
+    .aod-reviews-heading h2 {
+        font-size: 36px;
+    }
+
+    .aod-reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .aod-review-card:last-child {
+        grid-column: 1 / -1;
+
+        max-width: 500px;
+
+        width: 100%;
+
+        margin: 0 auto;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .aod-reviews-section {
+        padding: 60px 15px;
+    }
+
+
+    .aod-reviews-heading {
+        margin-bottom: 35px;
+    }
+
+
+    .aod-reviews-subtitle {
+        font-size: 11px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .aod-reviews-heading h2 {
+        font-size: 30px;
+    }
+
+
+    .aod-reviews-heading p {
+        font-size: 14px;
+
+        line-height: 1.6;
+
+        padding: 0 8px;
+    }
+
+
+    .aod-reviews-divider span {
+        width: 40px;
+    }
+
+
+    .aod-reviews-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    .aod-review-card,
+    .aod-review-card:last-child {
+        grid-column: auto;
+
+        width: 100%;
+
+        max-width: none;
+
+        min-height: auto;
+
+        padding: 30px 24px 25px;
+    }
+
+
+    .aod-review-card:hover {
+        transform: none;
+    }
+
+
+    .aod-review-text {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    .aod-review-summary {
+        margin-top: 35px;
+
+        padding: 18px 20px;
+
+        border-radius: 18px;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+
+
+    .aod-review-summary-line {
+        width: 80px;
+
+        height: 1px;
+    }
+
+
+    .aod-review-summary-rating {
+        justify-content: center;
+    }
+
+
+    .aod-review-summary-text {
+        align-items: center;
+    }
+
+}
